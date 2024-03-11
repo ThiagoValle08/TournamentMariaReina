@@ -1,0 +1,256 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 4rem;
+}
+.contenido {
+  display: flex;
+  position: relative;
+  top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.tituloBox h2 {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4.5em;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  color: white;
+  line-height: 1.2;
+  margin: 0 auto;
+}
+
+.tituloBox .jugadores {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 0 10px;
+  margin-left: 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: color 0.5s;
+  animation: tittleCoffee linear infinite 3s;
+}
+
+@keyframes tittleCoffee {
+  0%,
+  100% {
+    text-shadow: none;
+  }
+
+  50% {
+    text-shadow: 0 0 50px 20px white;
+    color: rgb(1, 12, 67);
+  }
+  70% {
+    text-shadow: 0 0 50px 20px white;
+    color: rgb(1, 12, 67);
+  }
+  90% {
+    text-shadow: 0 0 50px 20px white;
+    color: rgb(1, 12, 67);
+  }
+}
+
+.tituloBox p {
+  font-size: 1.8em;
+  line-height: 1.5;
+  color: white;
+  font-weight: 600;
+  margin: 0;
+}
+
+.selectionContainer {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding: 2em 0;
+  animation: multicolor-shadow 3s infinite ease;
+}
+
+.card_container {
+  width: 80%;
+}
+
+@keyframes multicolor-shadow {
+  0% {
+    box-shadow: 0 0 10px #08c4f3, 0 0 20px #9506ce, 0 0 30px #ffffff;
+  }
+  50% {
+    box-shadow: 0 0 20px #ffffff, 0 0 30px #08c4f3, 0 0 40px #9506ce;
+  }
+  100% {
+    box-shadow: 0 0 30px #9506ce, 0 0 40px #ffffff, 0 0 50px #08c4f3;
+  }
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  border-radius: 0.5rem;
+  max-width: 290px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background-color: #fff;
+}
+
+.dismiss {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: black;
+  border: 2px solid #d1d5db;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  transition: 0.3s ease;
+}
+
+.dismiss:hover {
+  background-color: #ee0d0d;
+  border: 2px solid #ee0d0d;
+  color: #fff;
+}
+
+.header {
+  padding: 1.25rem 1rem 1rem 1rem;
+}
+
+.image {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e2feee;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  animation: animate 0.6s linear alternate-reverse infinite;
+  transition: 0.6s ease;
+}
+
+.image svg {
+  color: #0afa2a;
+  width: 2rem;
+  height: 2rem;
+}
+
+.content {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.title {
+  color: #066e29;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.message {
+  margin-top: 0.5rem;
+  color: #595b5f;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.actions {
+  margin: 0.75rem 1rem;
+}
+
+.history {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  background-color: #1aa06d;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.track {
+  display: inline-flex;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  color: #242525;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.09);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .tituloBox h2 {
+    font-size: 3rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .selectionContainer {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .select {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+}

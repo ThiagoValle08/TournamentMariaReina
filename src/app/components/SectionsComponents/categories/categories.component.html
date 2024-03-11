@@ -1,0 +1,55 @@
+<div class="container">
+    <section class="contenido mb-5" id="contenido">
+        <article id="jugadores" class="tituloBox">
+            <h2>Nuestras</h2>
+            <h2 class="jugadores"> Categorias</h2>
+        </article>
+    </section>
+    <div class="selectionContainer">
+        <div class="select">
+            <section class="contenido mb-5">
+                <article class="titulo">
+                    <h2>Seleccione la <br>categoria del torneo</h2>
+                </article>
+            </section>
+            <form [formGroup]="Form" class="mx-5">
+                <mat-form-field>
+                    <mat-label>categorias</mat-label>
+                    <mat-select ControlName="category" (selectionChange)="showBoxCategory($event)">
+                        <mat-option value="prescolar a segundo" disabled="true">Prescolar a segundo</mat-option>
+                        <mat-option value="tercero a quinto" disabled="true">Tercero a quinto</mat-option>
+                        <mat-option value="sexto a octavo" disabled="true">Sexto a octavo</mat-option>
+                        <mat-option value="noveno a undecimo">Noveno a undecimo</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+        </div>
+        <div class="card_container" *ngIf="showbox">
+            <div class="card">
+                <button class="dismiss" type="button" (click)="showbox = false" disabled>×</button>
+                <div class="header">
+                    <div class="image">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M20 7L9.00004 18L3.99994 13" stroke="#000000" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="content">
+                        <span class="title">Categoria {{Form.get('category').value}}</span>
+                        <p class="message"> La categoría seleccionada abarca exclusivamente torneos para los grados de
+                            {{Form.get('category').value}} grado. Por favor, asegúrate de que tu selección corresponda a
+                            esta
+                            categoría. ¡Gracias!</p>
+                    </div>
+                    <a [href]="url" target="_blank">
+                        <button class="history" type="button">Ir al torneo</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

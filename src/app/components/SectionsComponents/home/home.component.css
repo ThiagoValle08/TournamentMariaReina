@@ -1,0 +1,202 @@
+.contenedor {
+  margin-top: 6rem;
+  padding: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tituloBox h2 {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4.5em;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  color: white;
+  line-height: 1.2;
+  margin: 0 auto;
+}
+
+.tituloBox .jugadores {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 0 10px;
+  margin-left: 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: color 0.5s;
+  animation: tittleCoffee linear infinite 2s;
+}
+
+@keyframes tittleCoffee {
+  0%,
+  100% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 50px 20px white;
+    color: rgb(1, 12, 67);
+  }
+  70% {
+    text-shadow: 0 0 50px 20px white;
+    color: rgb(1, 12, 67);
+  }
+  90% {
+    text-shadow: 0 0 50px 20px white;
+    color: rgb(1, 12, 67);
+  }
+}
+
+.tituloBox p {
+  font-size: 1.8em;
+  line-height: 1.5;
+  color: white;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 30%;
+  height: 33rem;
+  background: #171717;
+  transition: 1s ease-in-out;
+  clip-path: polygon(
+    30px 0%,
+    100% 0,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0% 30px
+  );
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  padding: 20px;
+}
+
+#vision {
+  position: relative;
+  bottom: 3rem;
+}
+
+#infovision {
+  position: relative;
+  bottom: 1rem;
+}
+
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+  position: relative;
+  bottom: 2rem;
+}
+
+.card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card .img {
+  width: 9rem;
+  height: 9rem;
+  background: rgb(255, 255, 255, 0.7);
+  border-radius: 15px;
+  margin: auto;
+}
+
+.card .img img {
+  width: 9em;
+}
+
+.card a {
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.card a:hover {
+  color: rgb(217, 35, 30);
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: 0.4s ease-in-out;
+}
+
+.card button:hover {
+  background: rgb(217, 35, 30);
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+  .contenido {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+    width: 95vw;
+  }
+
+  .contenedor {
+    padding: 0;
+  }
+
+  .card_container {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+  }
+
+  .card span {
+    bottom: 1rem;
+  }
+
+  #vision {
+    position: relative;
+    bottom: 1.5rem;
+  }
+
+  .info {
+    padding-bottom: 1rem;
+  }
+}
