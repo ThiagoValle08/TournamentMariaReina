@@ -1,4 +1,29 @@
+<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+=======
+:root {
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: 0.813rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 10px; /* Redondeado */
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra de desplazamiento */
+  height: 12px; /* Altura de la barra de desplazamiento (en caso de ser horizontal) */
+  background-color: rgb(68, 67, 67);
+}
+>>>>>>> 77fa42b (commit del repocitorio del torneo)

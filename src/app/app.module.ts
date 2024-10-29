@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+<<<<<<< HEAD
 import {
   BrowserModule,
   provideClientHydration,
@@ -31,10 +32,18 @@ import { CategoriesComponent } from './components/SectionsComponents/categories/
 import { HomeComponent } from './components/SectionsComponents/home/home.component';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms'; // Importante para usar formularios reactivos
+=======
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { TeamsComponent } from './teams/teams.component';
+>>>>>>> 77fa42b (commit del repocitorio del torneo)
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     PrescolarComponent,
     PrimeroComponent,
     SegundoComponent,
@@ -69,3 +78,17 @@ import { ReactiveFormsModule } from '@angular/forms'; // Importante para usar fo
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+=======
+    TeamsComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [
+    provideClientHydration()
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+>>>>>>> 77fa42b (commit del repocitorio del torneo)
